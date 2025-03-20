@@ -1,0 +1,454 @@
+@charset "UTF-8";
+@font-face {
+  font-family: "Lato";
+  src: url("../assets/fonts/Lato/Lato-Black.woff") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100%;
+}
+
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  font-weight: 400;
+  color: var(--color-gray-800);
+  background-color: var(--color-white);
+  min-height: 100%;
+  font-size: 16px;
+}
+body.is-lock {
+  overflow: hidden;
+}
+
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: clamp(1.875rem, 0.952rem + 4.62vw, 4.5rem);
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: var(--color-white);
+}
+
+.h2 {
+  font-size: clamp(1.25rem, 1.074rem + 0.88vw, 1.75rem);
+  color: var(--color-gray-900);
+}
+
+.h3 {
+  font-size: clamp(1rem, 0.773rem + 1.14vw, 1.625rem);
+}
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+  color: inherit;
+  margin: 0;
+  padding: 0;
+}
+a:hover {
+  color: var(--grey-color);
+}
+a[class] {
+  text-decoration: none;
+}
+
+:focus-visible {
+  outline: 2px dashed var(--color-light);
+  outline-offset: 4px;
+  transition-duration: 0s !important;
+}
+
+a,
+button {
+  border: none;
+  background: transparent;
+}
+a[aria-label],
+button[aria-label] {
+  position: relative;
+}
+a[aria-label]::before,
+button[aria-label]::before {
+  content: "";
+}
+
+section {
+  scroll-margin-top: 100px;
+}
+
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+label {
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.container {
+  max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+  margin-inline: auto;
+  padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  margin: -1px !important;
+  border: 0 !important;
+  padding: 0 !important;
+  white-space: nowrap !important;
+  clip-path: inset(100%) !important;
+  clip: rect(0 0 0 0) !important;
+  overflow: hidden !important;
+}
+
+@media (width <= 768.98px) {
+  .hidden-mobile {
+    display: none !important;
+  }
+}
+
+@media (width > 768.98px) {
+  .visible-mobile {
+    display: none !important;
+  }
+}
+
+:root {
+  --color-white: #fff;
+  --color-primary: #ff5a30;
+  --color-success: #03cea4;
+  --color-danger: #ff4242;
+  --color-warning: #f89828;
+  --color-info: #5a87fc;
+  --color-gray-900: #1e212c;
+  --color-gray-800: #424551;
+  --color-gray-700: #787a80;
+  --color-gray-600: #9a9ca5;
+  --color-gray-500: #b3b7bc;
+  --color-gray-400: #d7dadd;
+  --color-gray-300: #e5e8ed;
+  --color-gray-200: #f4f5f6;
+  --color-gray-100: #f9f9f9;
+  --transition-duration: 0.2s;
+  --font-family: "Ubuntu", sans-serif;
+  --second-family: "Lato", sans-serif;
+  --container-width: 1230px;
+  --container-padding-x: 30px;
+}
+
+/**
+  Нормализация блочной модели
+ */
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+/**
+  Убираем внутренние отступы слева тегам списков,
+  у которых есть атрибут class
+ */
+:where(ul, ol):where([class]) {
+  padding-left: 0;
+}
+
+/**
+  Убираем внешние отступы body и двум другим тегам,
+  у которых есть атрибут class
+ */
+body,
+:where(blockquote, figure):where([class]) {
+  margin: 0;
+}
+
+/**
+  Убираем внешние отступы вертикали нужным тегам,
+  у которых есть атрибут class
+ */
+:where(h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+dl):where([class]) {
+  margin-block: 0;
+}
+
+:where(dd[class]) {
+  margin-left: 0;
+}
+
+:where(fieldset[class]) {
+  margin-left: 0;
+  padding: 0;
+  border: none;
+}
+
+/**
+  Убираем стандартный маркер маркированному списку,
+  у которого есть атрибут class
+ */
+:where(ul[class]) {
+  list-style: none;
+}
+
+:where(address[class]) {
+  font-style: normal;
+}
+
+/**
+  Обнуляем вертикальные внешние отступы параграфа,
+  объявляем локальную переменную для внешнего отступа вниз,
+  чтобы избежать взаимодействие с более сложным селектором
+ */
+p {
+  --paragraphMarginBottom: 24px;
+  margin-block: 0;
+}
+
+/**
+  Внешний отступ вниз для параграфа без атрибута class,
+  который расположен не последним среди своих соседних элементов
+ */
+p:where(:not([class]):not(:last-child)) {
+  margin-bottom: var(--paragraphMarginBottom);
+}
+
+/**
+  Упрощаем работу с изображениями и видео
+ */
+img,
+video {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/**
+  Наследуем свойства шрифт для полей ввода
+ */
+input,
+textarea,
+select,
+button {
+  font: inherit;
+}
+
+html {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  height: 100%;
+  /**
+    Убираем скачок интерфейса по горизонтали
+    при появлении / исчезновении скроллбара
+   */
+  scrollbar-gutter: stable;
+}
+
+/**
+  Плавный скролл
+ */
+html,
+:has(:target) {
+  scroll-behavior: smooth;
+}
+
+body {
+  /**
+    Пригодится в большинстве ситуаций
+    (когда, например, нужно будет "прижать" футер к низу сайта)
+   */
+  min-height: 100%;
+  /**
+    Унифицированный интерлиньяж
+   */
+  line-height: 1.5;
+}
+
+/**
+  Нормализация высоты элемента ссылки при его инспектировании в DevTools
+ */
+a:where([class]) {
+  display: inline-flex;
+}
+
+/**
+  Курсор-рука при наведении на элемент
+ */
+button,
+label {
+  cursor: pointer;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут fill со значением 'none' или начинается с 'url')
+ */
+:where([fill]:not([fill=none],
+[fill^=url])) {
+  fill: currentColor;
+}
+
+/**
+  Приводим к единому цвету svg-элементы
+  (за исключением тех, у которых уже указан
+  атрибут stroke со значением 'none')
+ */
+:where([stroke]:not([stroke=none],
+[stroke^=url])) {
+  stroke: currentColor;
+}
+
+/**
+  Чиним баг задержки смены цвета при взаимодействии с svg-элементами
+ */
+svg * {
+  transition-property: fill, stroke;
+}
+
+/**
+  Приведение рамок таблиц в классический 'collapse' вид
+ */
+:where(table) {
+  border-collapse: collapse;
+  border-color: currentColor;
+}
+
+/**
+  Удаляем все анимации и переходы для людей,
+  которые предпочитают их не использовать
+ */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  ::before,
+  ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+.header {
+  padding: 22px 0;
+}
+.header__inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header__logo {
+  margin-left: 5px;
+}
+.header__nav {
+  margin-left: -110px;
+}
+.header--main {
+  background-color: var(-color-white);
+}
+
+.nav__list {
+  display: flex;
+  column-gap: clamp(1.25rem, 0.81rem + 2.2vw, 2.5rem);
+}
+.nav__link {
+  font-weight: 700;
+  line-height: 1.6;
+  color: var(--color-gray-800);
+}
+
+.header-contacts {
+  display: flex;
+  align-items: center;
+  column-gap: 36px;
+}
+.header-contacts__link {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.contacts-link {
+  padding-left: 53px;
+  background-position: left center;
+  background-size: 40px 40px;
+  background-repeat: no-repeat;
+}
+.contacts-link__caption {
+  font-weight: 700;
+  font-size: 14px;
+}
+.contacts-link__value {
+  font-size: 18px;
+  line-height: 1.5;
+  color: var(--color-gray-900);
+}
+.contacts-link--call {
+  background-image: url("../assets/icons/call-icon.svg");
+}
+.contacts-link--chat {
+  background-image: url("../assets/icons/chat-icon.svg");
+}
+
+/*# sourceMappingURL=main.css.map */

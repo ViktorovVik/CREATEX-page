@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.header {
+   padding: 22px 0;
+   &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__logo {
+      margin-left: 5px;
+   }
+
+   &__nav {
+      margin-left: -110px;
+   }
+
+   &--main {
+      background-color: var(-color-white);
+   }
+}
