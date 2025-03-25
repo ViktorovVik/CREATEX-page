@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.services-section {
+   background: var(--color-gray-200);
+   padding-top: 205px;
+   
+   &__inner {
+
+   }
+   
+   
+   &__title {
+      margin-bottom: 20px;
+   }
+   
+   &__desc {
+
+   }
+}
