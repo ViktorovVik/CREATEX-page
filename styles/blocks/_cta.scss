@@ -1,0 +1,33 @@
+@use '../helpers' as *;
+
+.cta {
+   position: relative;
+   top: 92px;
+   border-radius: 4px;
+   padding: 48px 60px;
+   box-shadow: 
+         0 4px 4px -4px rgba(30, 33, 44, 0.03), 
+         0 12px 10px -6px rgba(154, 156, 165, 0.04),
+         0 30px 24px -10px rgba(154, 156, 165, 0.05), 
+         0 80px 80px -20px rgba(154, 156, 165, 0.08);
+   background: var(--color-white);
+
+   &__title {
+      margin-bottom: 32px;
+   }
+   
+   &__content {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+   }
+
+   &__field {
+      margin-right: 24px;
+   }
+
+   &__btn {
+      padding: 7.5px 29px;
+   }
+}
+
