@@ -1,0 +1,121 @@
+@use '../helpers' as *;
+
+
+.services-list {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 30px;
+   margin-bottom: 81px;
+}
+
+.services-item {
+   position: relative;
+   display: block;
+   border: 1px solid #e5e8ed;
+   border-radius: 4px;
+      
+   box-shadow: 
+   0 4px 4px -4px rgba(30, 33, 44, 0.03), 
+   0 12px 10px -6px rgba(154, 156, 165, 0.04), 
+   0 30px 24px -10px rgba(154, 156, 165, 0.05), 
+   0 80px 80px -20px rgba(154, 156, 165, 0.08);
+   background: var(--color-white);
+
+   padding: 0 10px;
+   padding-top: 86px;
+   padding-bottom: 85px;
+
+   &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+      border-radius: inherit;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: var(--color-gray-800);
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+   }
+
+   &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 5;
+      border-radius: inherit;
+      background-color: rgba(#1e212c, 0.6);
+      opacity: 0;
+      transition: opacity .3s ease-in-out;
+   }
+
+   &__content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; 
+      position: relative;
+      z-index: 10;
+   }
+
+   &__icon {
+      margin-bottom: 24px;
+      width: 52px;
+      height: 52px;
+      fill: var(--color-primary);
+      object-fit: cover;
+      transition: fill .3s ease-in-out;
+   }
+   
+   &__title {
+      transition: color .3s ease-in-out;
+   }
+
+   &--construction {
+      &::before {
+         background-image: url('../assets/images/services/services1.webp');
+      }    
+   }
+
+   &--development {
+      &::before {
+         background-image: url('../assets/images/services/services2.webp');
+      }    
+   }
+
+   &--interior {
+      &::before {
+         background-image: url('../assets/images/services/services3.webp');
+      }    
+   }
+
+   &--repairs {
+      &::before {
+         background-image: url('../assets/images/services/services4.webp');
+      }    
+   }
+
+   &:hover {
+      &::before {
+         opacity: 1;
+      }
+      &::after {
+         opacity: 1;
+      }
+
+      .services-item__icon {
+         fill: var(--color-white);
+      }
+
+      .services-item__title {
+         color: var(--color-white);
+      }
+   }
+}

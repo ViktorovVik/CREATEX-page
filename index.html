@@ -13,7 +13,7 @@
    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
-   <header class="header">
+   <header class="header none1">
       <div class="header__inner container">
          <a href="#!" class=" header__logo logo">
             <img src="./assets/logo/logo.svg" alt=""Createx logo>
@@ -50,7 +50,7 @@
       </div>
    </header>
    <main class="main">
-      <section class="hero">
+      <section class="hero none1">
          <div class="hero__inner container">
             <div class="hero__content">
                <div class="hero__title">
@@ -69,7 +69,7 @@
             </div>           
          </div>
       </section>
-      <section class="us"> <!--ABOUT-SECTION-->
+      <section class="us none1"> <!--ABOUT-SECTION-->
          <div class="us__inner container">
             <div class="us__title">
                <h2 class="h2 text-center">We are Createx Construction Bureau </h2>
@@ -92,7 +92,7 @@
             </div>           
          </div>
       </section>
-      <section class="mission">
+      <section class="mission none1">
          <div class="mission__inner container"> 
             <div class="mission__title text-center">
                <h2 class="h2">Our core values</h2>
@@ -136,15 +136,61 @@
             </form>
          </div>
       </section>
-      <section class="services-section">
-         <div class="services-section__inner container text-center">
-            <div class="services-section__title ">
+      <section class="services-section none1">
+         <div class="services-section__inner container">
+            <div class="services-section__title text-center">
                <h2 class="h2">Our services</h2>
             </div>
-            <div class="services-section__desc">
+            <div class="services-section__desc text-center">
                <p>
                   Createx Construction Bureau is&nbsp;a&nbsp;construction giant with a&nbsp;full range of&nbsp;construction services.
                </p>
+            </div>
+            <ul class="services-list">
+               <li class="services-list__item">
+                  <a href="#!" class="services-item services-item--construction">
+                     <div class="services-item__content">
+                        <svg class="services-item__icon" aria-hidden="true">
+                           <use xlink:href="assets/icons/sprites.svg#construction-icon"></use>
+                        </svg>
+                        <h4 class="h4 services-item__title">Construction</h4>
+                     </div>                     
+                  </a>
+               </li>
+               <li class="services-list__item">
+                  <a href="#!" class="services-item services-item--development">
+                     <div class="services-item__content">
+                        <svg class="services-item__icon" aria-hidden="true">
+                           <use xlink:href="assets/icons/sprites.svg#development-icon"></use>
+                        </svg>
+                        <h4 class="h4 services-item__title">Project Development</h4>
+                     </div>                     
+                  </a>
+               </li>
+               <li class="services-list__item">
+                  <a href="#!" class="services-item services-item--interior">
+                     <div class="services-item__content">
+                        <svg class="services-item__icon" aria-hidden="true">
+                           <use xlink:href="assets/icons/sprites.svg#interior-icon"></use>
+                        </svg>
+                        <h4 class="h4 services-item__title">Interior Design</h4>
+                     </div>                     
+                  </a>
+               </li>
+               <li class="services-list__item">
+                  <a href="#!" class="services-item services-item--repairs">
+                     <div class="services-item__content">
+                        <svg class="services-item__icon" aria-hidden="true">
+                           <use xlink:href="assets/icons/sprites.svg#repairs-icon"></use>
+                        </svg>
+                        <h4 class="h4 services-item__title">Repairs</h4>
+                     </div>                     
+                  </a>
+               </li>
+            </ul>
+            <div class="services-section__link">
+               <h3 class="h3">Learn more about our services</h3>
+               <a target="_blank" href="#!" class="btn btn--fill services-section__btn">View services</a>
             </div>
          </div>
       </section>
