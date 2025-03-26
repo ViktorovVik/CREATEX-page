@@ -1,0 +1,13 @@
+@use '../helpers' as *;
+
+.view-more {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   column-gap: 40px;
+
+   &__btn {
+      padding: 12px 39px;
+   }
+}
+

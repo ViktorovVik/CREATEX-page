@@ -1,8 +1,8 @@
 @use '../helpers' as *;
 
 .services-section {
-   background-image: url('');
    background: var(--color-gray-200);
+   background-image: url('../assets/images/services/bg-image.png');
    padding-top: 205px;
    padding-bottom: 78px;
 
@@ -16,14 +16,14 @@
       margin-bottom: 60px;
    }
 
-   &__link {
+   .view-more____link {
       display: flex;
       column-gap: 40px;
       justify-content: center;
       align-items: center;
    }
 
-   &__btn {
+   .view-more____btn {
       padding: 11.5px 39.6px;
    }
 }
