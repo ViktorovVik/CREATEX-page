@@ -10,6 +10,7 @@
    <link rel="manifest" href="assets/favicon/site.webmanifest" />
    <meta name="apple-mobile-web-app-title" content="MyWebSite" />
    <title>CREATEX CONSTRUCTION</title>
+   <link rel="stylesheet" href="./styles/swiper.min.css">
    <link rel="stylesheet" href="./styles/main.css">
 </head>
 <body>
@@ -188,12 +189,94 @@
                   </a>
                </li>
             </ul>
-            <div class="services-section__link">
+            <div class="view-more">
                <h3 class="h3">Learn more about our services</h3>
-               <a target="_blank" href="#!" class="btn btn--fill services-section__btn">View services</a>
+               <a target="_blank" href="#!" class="btn btn--fill view-more__btn">View services</a>
+            </div>
+         </div>
+      </section>
+      <section class="portfolio-section">
+         <div class="portfolio-section__inner container">
+            <div class="portfolio-section__top">
+               <div class="portfolio-section__title">
+                  <h2 class="h2">Browse our selected projects 
+                     and learn more about our work</h2>
+               </div>
+               <div class="slider-nav portfolio-section__slider-nav">
+                  <button class="slider-nav__btn portfolio-section__next slider-btn">
+                     <svg class="slider-icon">
+                        <use xlink:href="assets/icons/sprites.svg#arrow-icon"></use>
+                     </svg>
+                  </button>
+                  <button class="slider-nav__btn portfolio-section__prev slider-btn">
+                     <svg class="slider-icon  slider-icon--rotate">
+                        <use xlink:href="assets/icons/sprites.svg#arrow-icon"></use>
+                     </svg>
+                  </button>
+               </div>
+            </div>
+            <div class="swiper portfolio-section__slider swiper-no-swiping">
+               <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                     <a href="#!" class="portfolio-item">
+                        <img class="portfolio-item__img" src="./assets/images/portfolio-section/image1.jpg" alt="Portfolio cover">
+                            <div class="portfolio-item__content">
+                              <h4 class="portfolio-item__title h4">Red Finger Building</h3>
+                                 <span class="portfolio-item__subtitle">Business Centers</span>
+                                 <div class="portfolio-item__btn btn">View Project</div>
+                           </div>
+                     </a>
+                  </div>
+                  <div class="swiper-slide"><a href="#!" class="portfolio-item">
+                     <img class="portfolio-item__img" src="./assets/images/portfolio-section/image1.jpg" alt="Portfolio cover">
+                         <div class="portfolio-item__content">
+                           <h4 class="portfolio-item__title h4">Red Finger Building</h3>
+                              <span class="portfolio-item__subtitle">Business Centers</span>
+                              <div class="portfolio-item__btn btn">View Project</div>
+                        </div>
+                  </a>
+               </div>
+                  <div class="swiper-slide">
+                     <a href="#!" class="portfolio-item">
+                     <img class="portfolio-item__img" src="./assets/images/portfolio-section/image1.jpg" alt="Portfolio cover">
+                         <div class="portfolio-item__content">
+                           <h4 class="portfolio-item__title h4">Red Finger Building</h3>
+                              <span class="portfolio-item__subtitle">Business Centers</span>
+                              <div class="portfolio-item__btn btn">View Project</div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="swiper-slide">
+                     <a href="#!" class="portfolio-item">
+                     <img class="portfolio-item__img" src="./assets/images/portfolio-section/image1.jpg" alt="Portfolio cover">
+                         <div class="portfolio-item__content">
+                           <h4 class="portfolio-item__title h4">Red Finger Building</h3>
+                              <span class="portfolio-item__subtitle">Business Centers</span>
+                              <div class="portfolio-item__btn btn">View Project</div>
+                        </div>
+                     </a>
+                  </div>
+                  <div class="swiper-slide">
+                     <a href="#!" class="portfolio-item">
+                     <img class="portfolio-item__img" src="./assets/images/portfolio-section/image1.jpg" alt="Portfolio cover">
+                         <div class="portfolio-item__content">
+                           <h4 class="portfolio-item__title h4">Red Finger Building</h3>
+                              <span class="portfolio-item__subtitle">Business Centers</span>
+                              <div class="portfolio-item__btn btn">View Project</div>
+                        </div>
+                     </a>
+                  </div>
+               </div>
+            </div>
+            <div class="view-more">
+               <h3 class="h3">Explore all our works</h3>
+               <a target="_blank" href="#!" class="btn btn--fill view-more__btn">View portfolio</a>
             </div>
          </div>
       </section>
    </main>
+   <script src="./js/swiper.js"></script>
+   <script src="./js/sliders.js"></script>
+   <script src="./js/main.js"></script>
 </body>
 </html>
