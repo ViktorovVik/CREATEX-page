@@ -60,6 +60,7 @@ body {
 .h2 {
    font-size: clamp(1.563rem, 1.101rem + 2.31vw, 2.875rem);
    color: var(--color-gray-900);
+   line-height: 1.3;
 }
 
 .h3 {
