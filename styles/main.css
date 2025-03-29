@@ -371,11 +371,6 @@ label {
   (за исключением тех, у которых уже указан
   атрибут stroke со значением 'none')
  */
-:where([stroke]:not([stroke=none],
-[stroke^=url])) {
-  stroke: currentColor;
-}
-
 /**
   Чиним баг задержки смены цвета при взаимодействии с svg-элементами
  */
@@ -445,6 +440,45 @@ svg * {
 }
 .btn--stroke-light {
   border-color: var(--color-white);
+}
+
+.slider-nav {
+  position: relative;
+  z-index: 15;
+  display: flex;
+  align-items: center;
+}
+.slider-nav__btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 100%;
+  width: 48px;
+  height: 48px;
+  color: var(--color-gray-800);
+  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+.slider-nav__btn:hover {
+  background-color: var(--color-primary);
+}
+.slider-nav__btn .slider-icon {
+  display: block;
+  width: 24px;
+  height: 24px;
+  color: inherit;
+  fill: currentColor;
+  object-fit: cover;
+}
+.slider-nav__btn .slider-icon--rotate {
+  transform: rotate(180deg);
+}
+.slider-nav__btn .slider-icon:hover {
+  fill: var(--color-white);
+}
+
+.slider-nav__btn.swiper-button-disabled {
+  opacity: 0.4;
+  pointer-events: none;
 }
 
 .nav__list {
@@ -877,45 +911,6 @@ svg * {
   color: var(--color-primary);
 }
 
-.slider-nav {
-  position: relative;
-  z-index: 15;
-  display: flex;
-  align-items: center;
-}
-.slider-nav__btn {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 100%;
-  width: 48px;
-  height: 48px;
-  color: var(--color-gray-800);
-  transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
-}
-.slider-nav__btn:hover {
-  background-color: var(--color-primary);
-}
-.slider-nav__btn .slider-icon {
-  display: block;
-  width: 24px;
-  height: 24px;
-  color: inherit;
-  fill: currentColor;
-  object-fit: cover;
-}
-.slider-nav__btn .slider-icon--rotate {
-  transform: rotate(180deg);
-}
-.slider-nav__btn .slider-icon:hover {
-  fill: var(--color-white);
-}
-
-.slider-nav__btn.swiper-button-disabled {
-  opacity: 0.4;
-  pointer-events: none;
-}
-
 .partners {
   background-color: var(--color-gray-200);
   padding: 80px 0;
@@ -931,7 +926,7 @@ svg * {
 }
 
 .testimonials {
-  padding: 93px 0;
+  padding-top: 93px;
   background-color: var(--color-gray-200);
 }
 .testimonials__inner {
@@ -944,6 +939,9 @@ svg * {
 }
 .testimonials__content {
   max-width: 608px;
+}
+.testimonials__image {
+  margin-bottom: -63px;
 }
 .testimonials__title {
   padding-top: 2px;
@@ -985,6 +983,85 @@ svg * {
   font-size: 14px;
   padding-right: 110px;
   color: var(--color-gray-700);
+}
+
+.facts {
+  position: relative;
+  overflow: hidden;
+  padding: 90px 0;
+  padding-top: 180px;
+  background-color: var(--color-white);
+}
+.facts:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 570px;
+  height: 1065px;
+  background-image: url(../assets/images/facts/bg-image.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.facts__title {
+  margin-bottom: 59px;
+}
+.facts__list {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  margin: 0 auto;
+  max-width: 730px;
+  gap: 48px;
+}
+.facts-element__circle {
+  --progress-stroke: #000;
+  --progress-bg-opacity: 0.3;
+  position: relative;
+  margin-bottom: 15px;
+  width: 148px;
+  height: 148px;
+}
+.facts-element__circle svg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+.facts-element__circle .progress {
+  stroke: var(--progress-stroke);
+  transform: rotate(-90deg) translate(20px);
+  transform-origin: center;
+}
+.facts-element__circle .progress-bg {
+  stroke: var(--progress-stroke);
+  opacity: var(--progress-bg-opacity);
+}
+.facts-element__circle--orange {
+  --progress-stroke: #f89828;
+}
+.facts-element__circle--pink {
+  --progress-stroke: #f52f6e;
+}
+.facts-element__circle--blue {
+  --progress-stroke: #5a87fc;
+}
+.facts-element__circle--green {
+  --progress-stroke: #03cea4;
+}
+.facts-element__value {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-weight: 700;
+  font-size: 32px;
+  color: var(--color-gray-900);
+}
+.facts-element__text {
+  font-size: 14px;
+  color: var(--color-gray-900);
 }
 
 /*# sourceMappingURL=main.css.map */

@@ -6,6 +6,7 @@
 
 @use 'blocks/header';
 @use 'blocks/buttons';
+@use 'blocks/slider-nav';
 @use 'blocks/logo';
 @use 'blocks/nav';
 @use 'blocks/header-contacts';
@@ -19,6 +20,6 @@
 @use 'blocks/services-list';
 @use 'blocks/view-more';
 @use 'blocks/portfolio-section';
-@use 'blocks/slider-nav';
 @use 'blocks/partners';
 @use 'blocks/testimonials';
+@use 'blocks/facts';
