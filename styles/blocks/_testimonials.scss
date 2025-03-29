@@ -1,8 +1,9 @@
 @use '../helpers' as *;
 
 .testimonials {
-   padding: 93px 0;
+   padding-top: 93px;
    background-color: var(--color-gray-200);
+
    &__inner {
       display: flex;
       justify-content: space-between;
@@ -15,6 +16,10 @@
    
    &__content {
       max-width: 608px;
+   }
+
+   &__image {
+      margin-bottom: -63px;      
    }
 
    &__title {
