@@ -1,0 +1,19 @@
+@use '../helpers' as *;
+
+.contacts-section {
+   padding: 80px 0;
+   background-image: url('../assets/images/contacts-section/contacts-bg.webp');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   background-color: var(--color-gray-700);
+
+   &__inner {
+      display: flex;
+      justify-content: flex-end;
+   }
+   
+   &__form {
+      background-color: var(--color-white);
+   }
+}

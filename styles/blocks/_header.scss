@@ -1,0 +1,23 @@
+@use '../helpers' as *;
+
+.header {
+   padding-top: 22px;
+   padding-bottom: 21px;
+   &__inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   &__logo {
+      margin-left: 5px;
+   }
+
+   &__nav {
+      margin-left: -110px;
+   }
+
+   &--main {
+      background-color: var(-color-white);
+   }
+}

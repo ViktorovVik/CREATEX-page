@@ -1,0 +1,73 @@
+@use '../helpers' as *;
+
+.mission {
+   background-color: var(--color-white);
+   padding-top: 79px;
+
+   &__inner {
+
+   }
+   
+   &__title {
+      margin-top: 10px;
+      margin-bottom: 20px;
+   }
+   
+   &__text {
+      margin-bottom: 60px;
+      font-size: 18px;
+      color: var(--color-gray-700);
+   }
+
+   &__list {
+      --mission-gap: 94px;
+
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      column-gap: calc(var(--mission-gap) * 2);
+      margin-bottom: 24px;
+   }
+
+   &__item {
+      position: relative;
+      padding-top: 69px;
+      text-align: center;
+      line-height: 1.6;
+      color: var(--color-gray-700);
+      background-position: top center;
+      background-repeat: no-repeat;
+      background-size: 48px 48px;
+
+      &:not(:last-child) {
+         &::after {
+            content: '';
+            position: absolute;
+            right: calc(-1 * var(--mission-gap));
+            top: 0;
+            width: 1px;
+            height: 100%;
+            background-image: url('../assets/icons/divider.svg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+          }
+      }
+
+      &--quality {
+         background-image: url('../assets/icons/quality.svg');
+      }
+
+      &--safety {
+         background-image: url('../assets/icons/safety.svg');
+      }
+
+      &--comfort{
+         background-image: url('../assets/icons/comfort.svg');
+      }
+
+   }
+   
+   &__desc {
+      margin-top: 8px;
+   }
+}

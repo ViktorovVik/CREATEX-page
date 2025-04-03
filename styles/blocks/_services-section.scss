@@ -1,0 +1,30 @@
+@use '../helpers' as *;
+
+.services-section {
+   background: var(--color-gray-200);
+   background-image: url('../assets/images/services/bg-image.png');
+   padding-top: 205px;
+   padding-bottom: 78px;
+
+   &__title {
+      margin-top: 7px;
+      margin-bottom: 20px;
+   }
+   
+   &__desc {
+      font-size: 18px;
+      color: var(--color-gray-700);
+      margin-bottom: 60px;
+   }
+
+   .view-more____link {
+      display: flex;
+      column-gap: 40px;
+      justify-content: center;
+      align-items: center;
+   }
+
+   .view-more____btn {
+      padding: 11.5px 39.6px;
+   }
+}

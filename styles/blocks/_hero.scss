@@ -1,0 +1,40 @@
+@use '../helpers' as *;
+
+.hero {
+   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/images/hero/bg-image.webp');
+    background-color: var(--color-gray-700);
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   padding-top: 215px;
+   padding-bottom: 348px;
+
+   &__inner {
+      
+
+   }
+
+   &__content {
+      max-width: 590px;
+      margin-left: 6px;
+   }
+   
+   &__title {
+      margin-bottom: 24px;
+   }
+   
+   &__desc {
+      margin-bottom: 60px;
+      p {
+         font-size: 20px;
+         color: var(--color-white);
+      }
+   }
+
+   &__buttons {
+      display: flex;
+      column-gap: 24px;
+   }
+}
+

@@ -1,0 +1,34 @@
+@use '../helpers' as *;
+
+.form-field {
+   display: flex;
+   flex-direction: column;
+
+   &__caption {
+      margin-bottom: 8px;
+      font-size: 14px;
+      color: var(--color-gray-800);
+   }
+   
+   &__input {
+      border: 1px solid #d7dadd;
+      border-radius: 4px;
+      width: 260px;
+      height: 44px;
+      font-size: 14px;
+      padding-left: 20px;
+
+      &::placeholder {
+         font-size: 14px;
+         color: var(--color-gray-600);
+      }
+   }
+
+   &--big {
+      flex-grow: 1;
+
+      .form-field__input {
+         width: 100%;
+      }
+   }
+}

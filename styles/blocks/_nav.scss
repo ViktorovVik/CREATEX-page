@@ -1,0 +1,22 @@
+@use '../helpers' as *;
+
+.nav {
+   &__list {
+      display: flex;
+      column-gap: clamp(1.25rem, 0.81rem + 2.2vw, 2.5rem);
+   }
+
+   &__item {
+
+   }
+
+   &__link {
+      font-weight: 700;
+      line-height: 1.6;
+      color:var(--color-gray-800);
+   }
+}
+
+
+
+

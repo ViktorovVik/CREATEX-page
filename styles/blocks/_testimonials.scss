@@ -1,0 +1,75 @@
+@use '../helpers' as *;
+
+.testimonials {
+   padding-top: 93px;
+   background-color: var(--color-gray-200);
+
+   &__inner {
+      display: flex;
+      justify-content: space-between;
+   }
+
+   &__slider {
+      position: relative;
+      padding-bottom: 9px;
+   }
+   
+   &__content {
+      max-width: 608px;
+   }
+
+   &__image {
+      z-index: 10;
+      margin-bottom: -63px;      
+   }
+
+   &__title {
+      padding-top: 2px;
+      margin-bottom: 60px;
+   }
+   
+   &__slider-nav {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+   }
+}
+
+.testimonials-item {
+   &__image {
+      overflow: hidden;
+      border-radius: 100%;
+      width: 72px;
+      height: 72px;
+      margin-bottom: 24px;
+
+      img {
+         object-fit: cover;
+      }
+   }
+
+   &__text {
+      margin-bottom: 23px;
+      p {
+         line-height: 1.6;
+         color: var(--color-gray-800);
+      }
+   }
+
+   &__author {
+      display: block;
+      font-weight: 700;
+      line-height: 1.6;
+      padding-right: 110px;
+      color: var(--color-gray-900);
+      margin-bottom: 3px;
+      padding-top: 1px;
+
+   }
+
+   &__author-position {
+      font-size: 14px;
+      padding-right: 110px;
+      color: var(--color-gray-700);
+   } 
+}

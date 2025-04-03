@@ -1,0 +1,67 @@
+@use '../helpers' as *;
+
+.video-block {
+   position: relative;
+   overflow: hidden;
+   border-radius: 4px;
+   height: 500px;
+
+   &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      z-index: 3;
+      background-color: rgba(#1e212c, 0.6);
+   }
+
+   &__play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: var(--color-primary);
+      transform: translate(-50%, -50%);
+      border-radius: 100%;
+      width: 80px;
+      height: 80px;
+
+      svg {
+         fill: var(--color-white);
+         width: 26px;
+         height: 26px;
+      }
+   }
+
+   &__muted {
+      position: absolute;
+      left: 32px;
+      bottom: 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9;
+      width: 40px;
+      height: 40px;
+      background-color: rgba(#fff, 0.12);
+      border-radius: 100%;
+
+      svg {
+         fill: var(--color-white);
+         width: 20px;
+         height: 20px;
+      }
+   }
+
+   &__content {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+   }
+}

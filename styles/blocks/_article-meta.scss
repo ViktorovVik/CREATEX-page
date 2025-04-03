@@ -1,0 +1,47 @@
+@use '../helpers' as *;
+
+
+.article-meta {
+   margin-bottom: 16px;
+
+   &__list {
+      display: flex;
+   }
+
+   &__item {
+      font-size: 14px;
+      color: var(--color-gray-700);
+
+      &:not(:last-child)::after {
+         content: '|';
+         padding-inline: 8px;
+         color: inherit;
+         height: 11px;
+      }
+
+      &--comments {
+         padding-left: 25px;
+         background-image: url('../assets/icons/comments.svg');
+         background-position: left center;
+         background-size: 16px 16px;
+         background-repeat: no-repeat;
+      }
+   }
+
+   &-title {
+      
+   }
+
+   &-link {
+      
+   }
+
+   &-time {
+
+   }
+
+   &-comments {
+
+   }
+
+}

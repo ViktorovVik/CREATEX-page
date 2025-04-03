@@ -1,0 +1,102 @@
+@use './helpers' as *;
+
+.container {
+   max-width: calc(var(--container-width) + var(--container-padding-x) * 2);
+   margin-inline: auto;
+   padding-inline: var(--container-padding-x);
+}
+
+.visually-hidden {
+   position: absolute !important;
+   width: 1px !important;
+   height: 1px !important;
+   margin: -1px !important;
+   border: 0 !important;
+   padding: 0 !important;
+   white-space: nowrap !important;
+   clip-path: inset(100%) !important;
+   clip: rect(0 0 0 0) !important;
+   overflow: hidden !important;
+}
+
+.hidden-mobile {
+   @include mobile {
+      display: none !important;
+   }
+}
+
+.visible-mobile {
+   @include mobile-above {
+      display: none !important;
+   }
+}
+
+.text-center {
+   text-align: center;
+}
+
+.none {
+   display: none !important;
+}
+
+.centred {
+   text-align: center;
+   width: 100%;
+}
+
+
+.custom-checkbox {
+   margin-bottom: 22px;
+
+   &__input {
+      opacity: 0;
+      position: absolute;
+   }
+
+   &__text {
+      display: inline-block;
+      padding-left: 29px;
+      position: relative;
+      font-size: 14px;
+
+      &::before {
+         content: "";
+         position: absolute;
+         left: 2px;
+         top: 2px;
+         display: inline-block;
+         border: 1px solid var(--color-primary);
+         border-radius: 3px;
+         width: 16px;
+         height: 16px;
+         transition: background-color 0.3s ease-in-out;
+      }
+
+      &::after {
+         content: "";
+         position: absolute;
+         left: 2px;
+         top: 2px;
+         width: 16px;
+         height: 16px;
+         background-image: url("../assets/icons/check.svg");
+         background-position: center;
+         background-size: 10px 8px;
+         background-repeat: no-repeat;
+         opacity: 0;
+         transition: opacity 0.3s ease-in-out;
+       }
+   }
+
+    &__input:checked + &__text::before {
+      background-color: var(--color-primary);
+    }
+  
+    &__input:checked + &__text::after {
+      opacity: 1;
+    }
+  
+    &__input:focus + &__text {
+      outline: 3px solid var(--color-primary);
+    }
+}
